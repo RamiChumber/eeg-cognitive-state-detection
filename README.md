@@ -83,3 +83,7 @@ numpy pandas scipy matplotlib seaborn scikit-learn lightgbm xgboost
 ```bash
 pip install numpy pandas scipy matplotlib seaborn scikit-learn lightgbm xgboost
 ```
+
+## Future Work
+
+For the scope of this project (time frame and computational resources), hyperparameters were treated as fixed based on reasonable defaults. Future work should focus on improving these through cross-validation (e.g., nested cross-validation), as well as considering employing deep-learning models on the raw EEG amplitude signals.
