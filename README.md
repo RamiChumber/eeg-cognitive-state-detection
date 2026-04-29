@@ -70,7 +70,7 @@ Evaluates LightGBM, XGBoost, Random Forest, SVM (Linear), KNN, and MLP under two
 Run in order (each script's output feeds the next):
 
 ```bash
-python feature_engineering.py   # → data/large_transformed_train.csv, data/anova_band_features.csv
+python feature_engineering.py   # → data/transformed_train.csv, data/anova_band_features.csv
 python eda.py                   # → figures/*.png  (requires data/anova_band_features.csv)
 python statistical_analysis.py  # → results/anova_*.csv, figures/anova_*.png
 python classification.py        # → results/*_results.csv, figures/fold_analysis.png
