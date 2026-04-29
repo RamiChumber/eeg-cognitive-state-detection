@@ -20,12 +20,14 @@ EEG (20 channels at 256 Hz), ECG, respiration (R), and GSR signals from 18 pilot
 | DA | Divided Attention | D |
 | SS | Sustained Surveillance | B |
 
-Event `A` is the resting baseline in all experiments. Data is sourced from the [Reducing Commercial Aviation Fatalities](https://www.kaggle.com/competitions/reducing-commercial-aviation-fatalities/data), a Booz Allen Hamilton competition dataset from 2018. It is not included in this repository — place the following files in `data/` before running any scripts:
+Event `A` is the resting baseline in all experiments. Data is sourced from the [Reducing Commercial Aviation Fatalities](https://www.kaggle.com/competitions/reducing-commercial-aviation-fatalities/data), a Booz Allen Hamilton competition dataset from 2018. It is not included in this repository — make sure the following files are in `data/` before running classification script:
 
 | File | Description |
 |---|---|
-| `train_original.csv` | Raw 18-pilot time-domain dataset |
-| `large_transformed_train.csv` | Pre-computed band power features (output of `feature_engineering.py`) |
+| `train.csv` | Raw 18-pilot time-domain dataset |
+| `transformed_train.csv` | Pre-computed band power features (output of `feature_engineering.py`) |
+
+A test set is also available on Kaggle, which can be used for further validation of the models.
 
 ## Project Structure
 

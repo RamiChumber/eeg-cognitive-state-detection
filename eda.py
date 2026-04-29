@@ -7,8 +7,8 @@ Section 2: Per-pilot cognitive state activation over time
 Section 3: Frequency-domain data — pilot variability, pairwise pilot distances,
            pilot identity vs cognitive state variance
 
-Inputs:  data/train_original.csv        (raw 18-pilot dataset)
-         data/large_transformed_train.csv (band power features, 18-pilot)
+Inputs:  data/train.csv                 (raw 18-pilot dataset)
+         data/transformed_train.csv     (band power features, 18-pilot)
          data/anova_band_features.csv   (ANOVA rankings — from feature_engineering.py)
 Outputs: figures/*.png
          data/pilot_variability.csv
@@ -41,7 +41,7 @@ print("=" * 60)
 print("SECTION 1: Raw time-domain EDA")
 print("=" * 60)
 
-df = pd.read_csv("data/train_original.csv")
+df = pd.read_csv("data/train.csv")
 df["pilot"] = 100 * df["seat"] + df["crew"]
 
 # 1a. Class balance
@@ -226,7 +226,7 @@ print("\n" + "=" * 60)
 print("SECTION 3: Pilot variability in transformed feature space")
 print("=" * 60)
 
-band_df = pd.read_csv("data/large_transformed_train.csv")
+band_df = pd.read_csv("data/transformed_train.csv")
 
 eeg_band_cols = [
     c for c in band_df.columns

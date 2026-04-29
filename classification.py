@@ -11,7 +11,7 @@ Two evaluation schemes on the frequency-domain (band power) feature set:
      Trains on all pilots except one, tests on the held-out pilot.
      Realistic estimate of operational cross-subject performance.
 
-Inputs:  data/large_transformed_train.csv (band power features, 18-pilot)
+Inputs:  data/transformed_train.csv       (band power features, 18-pilot)
          data/anova_band_features.csv     (ANOVA-ranked feature importance)
 Outputs: results/within_session_results.csv
          results/pilot_out_results.csv
@@ -107,7 +107,7 @@ print("=" * 60)
 print("NOTE: Scores are optimistic — adjacent windows appear in both train/test.")
 print("      Pilot-out CV (Section 2) is the more reliable evaluation.\n")
 
-band_df  = pd.read_csv("data/large_transformed_train.csv")
+band_df  = pd.read_csv("data/transformed_train.csv")
 anova_df = pd.read_csv("data/anova_band_features.csv")
 
 eeg_band_cols = [

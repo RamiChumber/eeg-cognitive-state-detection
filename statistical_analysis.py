@@ -4,8 +4,8 @@ Statistical Analysis — Feature Separability via One-Way ANOVA
 Computes ANOVA η² (effect size) for both raw time-domain and frequency-domain
 features across the 18-pilot dataset.
 
-Inputs:  data/train_original.csv          (18-pilot raw)
-         data/large_transformed_train.csv  (18-pilot transformed)
+Inputs:  data/train.csv                    (18-pilot raw)
+         data/transformed_train.csv        (18-pilot transformed)
 Outputs: results/anova_raw_18pilots.csv
          results/anova_transformed_18pilots.csv
          figures/anova_raw_18pilots.png
@@ -23,8 +23,8 @@ warnings.filterwarnings("ignore")
 os.makedirs("results", exist_ok=True)
 os.makedirs("figures", exist_ok=True)
 
-RAW_PATH         = "data/train_original.csv"
-TRANSFORMED_PATH = "data/large_transformed_train.csv"
+RAW_PATH         = "data/train.csv"
+TRANSFORMED_PATH = "data/transformed_train.csv"
 
 RAW_FEATURES = [
     "eeg_fp1","eeg_f7","eeg_f8","eeg_t4","eeg_t6","eeg_t5","eeg_t3","eeg_fp2",

@@ -4,8 +4,8 @@ Feature Engineering — EEG Cognitive State Detection
 Transforms raw time-domain EEG + physiological signals into frequency-domain
 band power features using Welch's PSD method, then validates the output.
 
-Input:  data/train_original.csv          (raw, 18-pilot dataset)
-Output: data/large_transformed_train.csv  (band power features)
+Input:  data/train.csv                    (raw, 18-pilot dataset)
+Output: data/transformed_train.csv        (band power features)
         data/anova_band_features.csv      (ANOVA-ranked feature importance)
         figures/welch_verification.png    (diagnostic plot)
 """
@@ -24,8 +24,8 @@ os.makedirs("figures", exist_ok=True)
 # ══════════════════════════════════════════════════════════════════════════════
 # CONFIG
 # ══════════════════════════════════════════════════════════════════════════════
-RAW_PATH         = "data/train_original.csv"
-TRANSFORMED_PATH = "data/large_transformed_train.csv"
+RAW_PATH         = "data/train.csv"
+TRANSFORMED_PATH = "data/transformed_train.csv"
 ANOVA_OUT        = "data/anova_band_features.csv"
 
 WINDOW_SIZE = 256
