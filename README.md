@@ -8,6 +8,8 @@ This project was done as a part of the course AAE4009 DATA SCIENCE AND DATA-DRIV
 
 [Technical Report (PDF)](report.pdf)
 
+Note that the results in the report differ from the ones in main.ipynb, as the SSS-results are on a smaller, 4-pilot dataset. The report posits that the frequency domain transformation led to better results than performing classification on the time domain features. This was true for the smaller dataset, but isn't the case for the full 18-pilot dataset (the inverse is actually true), which is a noteworthy result.
+
 ## Dataset
 
 EEG (20 channels at 256 Hz), ECG, respiration (R), and GSR signals from 18 pilots across three experiments:
@@ -86,4 +88,4 @@ pip install numpy pandas scipy matplotlib seaborn scikit-learn lightgbm xgboost
 
 ## Future Work
 
-For the scope of this project (time frame and computational resources), hyperparameters were treated as fixed based on reasonable defaults. Future work should focus on improving these through cross-validation (e.g., nested cross-validation), as well as considering employing deep-learning models on the raw EEG amplitude signals.
+For the scope of this project (time frame and computational resources), hyperparameters were treated as fixed based on reasonable defaults. Future work should focus on tuning these through cross-validation (e.g., nested cross-validation), as well as considering employing deep-learning models on the raw EEG amplitude signals.
