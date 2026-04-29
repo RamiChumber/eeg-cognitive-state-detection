@@ -8,7 +8,7 @@ This project was done as a part of the course AAE4009 DATA SCIENCE AND DATA-DRIV
 
 [Technical Report (PDF)](report.pdf)
 
-Note that the results in the report differ from the ones in main.ipynb, as the SSS-results are on a smaller, 4-pilot dataset. The report posits that the frequency domain transformation led to better results than performing classification on the time domain features. This was true for the smaller dataset, but isn't the case for the full 18-pilot dataset (the inverse is actually true), which is a noteworthy result.
+Note that the results in the report differ from the ones in main.ipynb, as the SSS-results are on a smaller, 4-pilot dataset. The report posits that the frequency domain transformation led to better results than performing classification on the time domain features. This was true for the smaller dataset, but isn't the case for the full 18-pilot dataset (the inverse is actually true), which is a noteworthy result. However, the claim that frequency domain transformation improves cross-subject cognitive state detection is still true.
 
 ## Dataset
 
@@ -16,9 +16,9 @@ EEG (20 channels at 256 Hz), ECG, respiration (R), and GSR signals from 18 pilot
 
 | Experiment | Task | Active event label |
 |---|---|---|
-| CA | Controlled Attention | C |
-| DA | Divided Attention | D |
-| SS | Sustained Surveillance | B |
+| CA | Channelized Attention | C |
+| DA | Diverted Attention | D |
+| SS | Startle/Surprise | B |
 
 Event `A` is the resting baseline in all experiments. Data is sourced from the [Reducing Commercial Aviation Fatalities](https://www.kaggle.com/competitions/reducing-commercial-aviation-fatalities/data), a Booz Allen Hamilton competition dataset from 2018. It is not included in this repository — make sure the following files are in `data/` before running classification script:
 
